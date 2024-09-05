@@ -1,0 +1,249 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sevillana&display=swap');
+#slogan,.i{
+    font-size: 80px;
+    margin-left: 0px;
+    padding-left: 0px;
+    
+  font-family: "Kanit", sans-serif; 
+}
+/*  */
+.instant-messaging {
+    font-size: 80px;
+    font-family: "Kanit", sans-serif;
+    background-color: rgb(227, 84, 227);
+    border-radius: 80px;
+    background-image: linear-gradient(90deg, rgba(255,0,0,0), rgb(92, 136, 143),  rgb(227, 84, 227));
+    background-size: 200% 200%; /* Ensures the background gradient is large enough to move */
+    animation: instant-messaging-Animation 10s ease infinite;
+}
+
+@keyframes instant-messaging-Animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#head{
+    font-size: 80px;  
+    font-family: "Kanit", sans-serif; 
+
+    margin-left: 0px;
+    padding-left: 500px;
+    max-width: 1100px;
+    font-weight:bolder;
+    font-style: normal;
+    background-color: 	rgb(24,24,24);
+    color: rgb(84, 223, 227);
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 10px 10px 25px rgb(227, 84, 227);
+}    
+
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#hk-img {
+  transition: transform 2s;
+    height: 220px;
+    width: 220px;
+    box-shadow: 10px 10px 25px rgb(227, 84, 227);
+
+}
+#hk-img:hover {
+  transform: scale(1.2);
+}
+
+#lady-img{
+    opacity:0;
+    height: 360px;
+    width: 360px;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+.mix{
+    display: flex;
+    align-items: center; /* Vertically center the items */
+}
+
+.content{
+  
+    z-index:1;
+    margin-right: 0px;
+    padding-right: 0px;
+    font-size: 40px;  
+    max-width: 1100px;
+    font-weight:bolder;
+    font-style: normal;
+    background-color: 	rgb(24,24,24);
+    color: rgb(84, 223, 227);
+    border-radius: 25px;
+    padding: 10px;
+    margin:20px;
+    box-shadow: 10px 10px 25px rgb(227, 84, 227);
+    background-size: cover;
+  }  
+
+.man-section{
+  display: flex;
+}
+
+#man-img{
+  width:360px;
+  margin-left: 0px;
+  padding-left: 0px;
+  opacity:0;
+}
+
+
+
+
+
+
+
+
+
+.cubeContainer {
+    perspective: 1000px;
+  }
+  
+  .cube {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(0) rotateY(0);
+    margin: 100px auto;
+  }
+  
+  .cube__face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgb(84, 223, 227);
+    border: 2px solid #318CE7;
+    /* border: 2px solid rgba(255, 255, 255, 0.5); */
+    box-shadow: 0 0 20px #318CE7;
+  }
+  /* .cube__face.front,.cube__face.back ,.cube__face.right,.cube__face.left ,.cube__face.top  ,  .cube__face.bottom {
+    border: 2px solid red;
+
+  } */
+  .cube__face.front  { transform: rotateY(  0deg) translateZ(50px); }
+  .cube__face.back   { transform: rotateY(180deg) translateZ(50px); }
+  .cube__face.right  { transform: rotateY( 90deg) translateZ(50px); }
+  .cube__face.left   { transform: rotateY(-90deg) translateZ(50px); }
+  .cube__face.top    { transform: rotateX( 90deg) translateZ(50px); }
+  .cube__face.bottom { transform: rotateX(-90deg) translateZ(50px); }
+  
+  /* @keyframes glow {
+    0% { box-shadow: 0 0 10px  #318CE7 0.5 }
+    50% { box-shadow: 0 0 20px  ( #318CE7, 1); }
+    100% { box-shadow: 0 0 10px  ( #318CE7, 0.5); }
+  } */
+  
+  .cube {
+    animation: glow 1.5s infinite alternate;
+  }
+  
+
+
+  #about-app{
+      
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size:35px;
+
+      }
+
+  
+
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgb(84, 223, 227), rgb(124, 165, 165), rgb(0, 255, 255));
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+  @media (max-width: 850px) {
+    #slogan, #head, .instant-messaging{
+        font-size:40px;
+    }
+    #lady-img{
+        
+    height: 220px;
+    width: 220px;
+    }
+
+    
+    #about-app{
+      
+      font-size: 26px;
+    }
+
+    #man-img{
+        
+      height: 320px;
+      width: 220px;
+      }
+
+      #hk-img{
+        height: 180px;
+        width: 180px;
+
+      }
+  }
+
+  @media (max-width: 576px) {
+    #slogan, #head, .instant-messaging{
+        font-size:25px;
+    }
+    #lady-img{
+        
+    height: 200px;
+    width: 200px;
+    }
+
+    #about-app{
+      font-size: 12px;
+    }
+
+    #man-img{
+        
+      height: 200px;
+      width: 200px;
+      }
+
+      #hk-img{
+        height: 180px;
+        width: 180px;
+
+      }
+  }
