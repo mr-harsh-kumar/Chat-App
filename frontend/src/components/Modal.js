@@ -257,18 +257,21 @@ const SignupModal = ({ showModal, closeModal, openLoginModal }) => {
                 'X-CSRFToken': csrfToken
             },
             success: function (response) {
-                setMessage(response.status);
-                signup(username);
-                setTimeout(() => {
-                   
-                    window.location.href = 'http://localhost:3000/chat_app/'
-
-                }, 2000);
+                if (response.status === 'success') {
+                    setMessage("Signup successful!");
+                    signup(username);
+                    setTimeout(() => {
+                        window.location.href = 'http://localhost:3000/chat_app/';
+                    }, 2000);
+                } else if (response.status === 'error' && response.message === "This username is already existed") {
+                    setMessage("This username already exists"); // Set message if user already exists
+                }
             },
             error: function (xhr, status, error) {
-                setMessage('Error');
+                setMessage('Error occurred during signup.');
             }
         });
+        
     };
 
     const togglePasswordVisibility = () => {

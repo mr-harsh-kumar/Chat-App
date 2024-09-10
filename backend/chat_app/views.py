@@ -51,6 +51,11 @@ def login(request):
 def signup(request):
     if request.method == 'POST':
         username = request.POST['username']
+        
+        
+        if(Members.objects.filter(username=username).exists()):
+            return JsonResponse({"status": "error" , "message": "This username is already existed"})
+
         password = request.POST['password']
         image = request.FILES['image']
 
